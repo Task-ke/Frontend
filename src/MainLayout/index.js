@@ -8,7 +8,7 @@ import '../assets/css/bootstrap.min.css';
 import '../assets/css/animate.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
-import '../assets/js/viewport.jquery';
+
 import '../assets/js/jquery-3.6.0.min';
 import '../assets/js/jquery-ui';
 import '../assets/js/main';
