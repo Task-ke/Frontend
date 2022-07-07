@@ -11,7 +11,6 @@ import '../assets/css/responsive.css';
 import '../assets/js/viewport.jquery';
 import '../assets/js/jquery-3.6.0.min';
 import '../assets/js/jquery-ui';
-import '../assets/js/odometer.min';
 import '../assets/js/main';
 import {Routes  , Route,
     Link,

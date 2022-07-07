@@ -17695,7 +17695,7 @@ $.widget( "ui.tabs", {
 			var anchorUrl, locationUrl;
 
 			anchorUrl = anchor.href.replace( rhash, "" );
-			locationUrl = location.href.replace( rhash, "" );
+			locationUrl = window.location.href.replace( rhash, "" );
 
 			// Decoding may throw an error if the URL isn't UTF-8 (#9518)
 			try {
@@ -17748,7 +17748,7 @@ $.widget( "ui.tabs", {
 	_initialActive: function() {
 		var active = this.options.active,
 			collapsible = this.options.collapsible,
-			locationHash = location.hash.substring( 1 );
+			locationHash = window.location.hash.substring( 1 );
 
 		if ( active === null ) {
 
