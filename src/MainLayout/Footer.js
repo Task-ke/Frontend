@@ -6,24 +6,6 @@ function Footer() {
     <div>
         <div className="footer-area">
             <div className="container">
-                <div className="row align-items-center footer-border">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div className="footer-logo-wrap">
-                            <div className="footer-logo wow fadeInDown" data-wow-duration="2s" data-wow-delay=".5s">
-                                <Link to="index.html"><img src="assets/images/logo.png" alt=""/></Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mobt-24">
-                        <div className="footer-social text-lg-end">
-                            <ul>
-                                <li><Link to="#"><i className="bi bi-google"></i></Link></li>
-                                <li><Link to="#"><i className="bi bi-twitter"></i></Link></li>
-                                <li><Link to="#"><i className="bi bi-instagram"></i></Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div className="row">
                     <div className="col-xl-12 col-lg-12 col-sm-12 col-12">
                         <div className="footer-wrap">
@@ -35,10 +17,10 @@ function Footer() {
                                         </div>
                                         <div className="footer-link">
                                             <ul>
-                                                <li><Link to="#">How it Works</Link></li>
-                                                <li><Link to="#">Search Assignments</Link></li>
-                                                <li><Link to="#">Services Refer</Link></li>
-                                                <li><Link to="#">Earn Experts</Link></li>
+                                                <li><Link to="#">Create Tasks</Link></li>
+                                                <li><Link to="#">View organization</Link></li>
+                                                <li><Link to="#">View our Workers</Link></li>
+                                                <li><Link to="#">Partner with us</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -51,9 +33,9 @@ function Footer() {
                                         <div className="footer-contact">
                                             <ul>
                                                 <li>E-mail:</li>
-                                                <li><Link to="https://themeforest.wprealizer.com/cdn-cgi/l/email-protection#2a45444643444f0443444c456a4d474b434604494547"><span className="__cf_email__" data-cfemail="0b64656762656e2562656d644b6f6e666425686466">[email&#160;protected]</span></Link></li>
+                                                <li><Link to="lumulikenreagan@gmail.com"><span className="__cf_email__">Taskwithme</span></Link></li>
                                                 <li>Phone:</li>
-                                                <li><Link to="tel:01761111456">(+999) 555 666 00 22</Link></li>
+                                                <li><Link to="tel:0794784462">(+254) 794784462</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -71,7 +53,7 @@ function Footer() {
                                                 <li><Link to="gallery.html">Gallery Page.</Link></li>
                                             </ul>
                                             <ul className="useful-2">
-                                                <li><Link to="teachers.html">Teachers</Link></li>
+                                                <li><Link to="teachers.html">Our Workers</Link></li>
                                                 <li><Link to="faq.html">FAQ</Link></li>
                                                 <li><Link to="#">Privacy Policy</Link></li>
                                                 <li><Link to="#">Terms & Condition</Link></li>
@@ -91,7 +73,7 @@ function Footer() {
                                                 </div>
                                             </div>
                                             <div className="chart-content">
-                                                <h3>Subject Matter Experts And <br/> Writers</h3>
+                                                <h3>Success rate completion of tasks by <br/> our workers</h3>
                                             </div>
                                         </div>
                                         <div className="chart-wrap chart-wrap-design-2 d-flex align-items-center pt-4">
@@ -104,7 +86,7 @@ function Footer() {
                                                 </div>
                                             </div>
                                             <div className="chart-content">
-                                                <h3>Money Back Garganey and <br/> Rules</h3>
+                                                <h3>Money Back Guarantee and <br/> Rules</h3>
                                             </div>
                                         </div>
                                     </div>

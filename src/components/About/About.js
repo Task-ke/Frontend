@@ -18,15 +18,20 @@ function About() {
                     <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 mobt-24">
                     <div className="section-title">
                         <p>About Our History</p>
-                        <h1>Education is about learning skills and knowledge</h1>
+                        <h1>
+                            The history of Taskwithme
+                        </h1>
                     </div>
                     <div className="service-tab-content">
-                        <p>Pellentesque habitant morbid critique selectus et net's et aalesund fames ac turpin egesta. Donee accusal sapiens augur, pulvinate minibus nullo sagittal at. Sed egesta augur eger lucius pianissimo. Suspensive ut placenta turpin. Nulled sed augur sed maurist corvallis fuegian partition eu nisi. Dubs aliquot vulgate leo, quia corvallis eros ornate a. Nulled in erat a maurist congee tempus.</p>
+                        <p>
+                            Taskwithme is a young organization focused on bridgin the gap between the employers and
+                            the skilled professional who can handle such tasks. it build on key society foundation skills
+                        </p>
                         <ul>
-                            <li><i className="bi bi-check2-square"></i>Nuns egesta sodalist congee sit amen neue sed auctors.</li>
-                            <li><i className="bi bi-check2-square"></i>Aeneas premium neue eger massa quia semper.</li>
-                            <li><i className="bi bi-check2-square"></i>Crash id utricles ex, et congee torpor. Aeneas non pianissimo tellus.</li>
-                            <li><i className="bi bi-check2-square"></i>Maurist at placenta Nullo consenter dui sed ligula auctors.</li>
+                            <li><i className="bi bi-check2-square"></i>Trust</li>
+                            <li><i className="bi bi-check2-square"></i>Ellibigility</li>
+                            <li><i className="bi bi-check2-square"></i>Competence</li>
+                            <li><i className="bi bi-check2-square"></i>Consistency</li>
                         </ul>
                         <div className="signature-wrap d-flex align-items-center mt-5">
                             <div className="signature-people">

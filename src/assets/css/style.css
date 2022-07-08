@@ -344,7 +344,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   left: 0;
   top: 0;
   z-index: 9;
-  background: transparent;
+  background: #282c34;
   padding: 0 98px;
   border-bottom: 3px solid #704FFD;
 }
@@ -1844,17 +1844,13 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 }
 
 .footer-area {
-  background: #fff;
-  background-image: url(../images/shape/footer-1.png);
+  background: rgb(2, 2, 83);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 390px 0 7px;
+  padding: 40px 0 7px;
 }
 
-.footer-area.footer-area-style-2 {
-  background-image: url(../images/shape/footer-2.png);
-}
 
 .footer-area.footer-area-style-2 .footer-social ul li i {
   color: rgba(255, 255, 255, 0.2);
@@ -3463,8 +3459,43 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .back-to-top-btn i::before {
   vertical-align: middle;
 }
+
 .activeTab{
   background-color: #EF4126;
   font-size: large;
   font-weight: bolder;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+
+/* Styling for the tasking endpoint */
+
+.task-section{
+  margin: 20vh 10px 10px 0px;
+  padding: 10px;
+  width: 70%;
+}
+
+.task-body{
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  min-height: 20vh;
+  align-items: center;
+}
+
+.task-body button{
+  background: none;
+  border-style: none;
+  padding: 10px;
+  border: 1px solid black;
+  font-weight: bolder;
+}
+
+.task-body .manage-task button:hover{
+  background-color: #EF4126;
+  color: white;
 }
