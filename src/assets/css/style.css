@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 html, body {
   line-height: 1.6;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-weight: 400;
   font-size: 14px;
   color: #777777;
@@ -328,106 +328,35 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 /*================================================
 2. Header Menu CSS
 =================================================*/
-.logo, .main-nav, .menu-btn-wrap {
+.main-nav{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
 }
 
-.header-menu-area {
+.main-nav {
   width: 100%;
-  position: absolute;
   left: 0;
   top: 0;
   z-index: 9;
   background: #282c34;
-  padding: 0 98px;
-  border-bottom: 3px solid #704FFD;
+  border-bottom: 3px solid inherit;
+  position: fixed;
+  height: 10vh;
 }
 
-.header-menu-area.header-menu-style-2 {
-  border-bottom: 3px solid #ffffff1a;
-}
-
-.main-nav {
-  float: right;
-}
-
-.menu-btn-wrap {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.hamburger {
-  position: relative;
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  border: 5px solid transparent;
-  margin-top: 10px;
-  display: none;
-  z-index: 1;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 2px;
-  background: #EF4126;
-  display: block;
-  position: absolute;
-  right: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.hamburger span.h-top {
-  top: 0;
-}
-
-.hamburger span.h-bottom {
-  bottom: 0;
-  width: 27px;
-}
-
-.hamburger span.h-middle {
-  top: 50%;
-  margin-top: -1px;
-  width: 25px;
-}
-
-.hamburger.h-active span {
-  width: 100%;
-}
-
-.hamburger.h-active span.h-top {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 50%;
-  margin-top: -1px;
-}
-
-.hamburger.h-active span.h-middle {
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
-  opacity: 0;
-}
-
-.hamburger.h-active span.h-bottom {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 50%;
-  margin-bottom: -1px;
+.main-nav > ul{
+  margin-left: auto;
 }
 
 .main-nav > ul > li {
   display: inline-block;
   position: relative;
-  padding: 47px 23px;
+  padding: 20px 20px;
 }
 
 .main-nav > ul > li.has-child-menu:after {
@@ -444,7 +373,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 
 .main-nav > ul > li:hover.has-child-menu:after {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .main-nav > ul > li > a {
@@ -463,91 +392,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   opacity: 1;
 }
 
-.main-nav ul li .sub-menu {
-  position: absolute;
-  left: 0;
-  top: 90px;
-  min-width: 200px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  background: #fff;
-  -webkit-box-shadow: 7px 10px 40px rgba(13, 52, 79, 0.1);
-          box-shadow: 7px 10px 40px rgba(13, 52, 79, 0.1);
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-.main-nav ul li .sub-menu li .sub-menu {
-  right: -200px;
-  left: inherit;
-  top: 0;
-}
-
-.main-nav ul li .sub-menu > li {
-  display: block;
-  margin: 0;
-  position: relative;
-}
-
-.main-nav ul li .sub-menu > li a {
-  display: block;
-  padding: 15px 18px;
-  line-height: 1;
-  font-size: 15px;
-  font-weight: 500;
-  border-bottom: 1px solid #ddd;
-  text-decoration: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.main-nav ul li .sub-menu > li a:last-child {
-  border: none;
-}
-
-.main-nav ul li .sub-menu > li a:hover {
-  color: #EF4126;
-}
-
-.main-nav .fl {
-  width: 30px;
-  font-size: 20px;
-  line-height: 35px;
-  text-align: center;
-  color: #fff;
-  font-style: normal;
-  position: absolute;
-  right: -5px;
-  top: 0;
-  z-index: 999;
-  display: none;
-  cursor: pointer;
-}
-
-.main-nav .fl:before {
-  font-size: 14px;
-  text-align: center;
-  line-height: 35px;
-}
-
-.main-nav > ul > li + li > .sub-menu {
-  left: 15px;
-}
-
-.main-nav > ul > li:hover > .sub-menu, .main-nav ul li .sub-menu li:hover > .sub-menu, .main-nav ul li .sub-menu li .sub-menu li:hover > .sub-menu {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  visibility: visible;
-  opacity: 1;
-}
 
 .menu-btn {
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -571,162 +415,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   color: #fff;
 }
 
-.search-wrap {
-  padding-left: 63px;
-}
-
-.search-wrap .search-icon {
-  height: 30px;
-}
-
-.search-wrap .search-icon.active i.cancel {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.search-wrap .search-icon.active i.search {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.search-wrap .search-icon i {
-  position: absolute;
-  top: 50%;
-  color: #fff;
-  left: 50%;
-  font-size: 25px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.search-wrap .search-icon i.cancel {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.search-wrap .search-field {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  position: absolute;
-  bottom: -85px;
-  right: 15px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.search-wrap .search-field::before {
-  position: absolute;
-  content: "";
-  height: 10px;
-  width: 20px;
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background: #ECB600;
-  bottom: 99%;
-  right: 5px;
-}
-
-.search-wrap .search-field form {
-  height: 50px;
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 6px;
-  padding: 3px;
-  background: #ECB600;
-  overflow: hidden;
-  -webkit-box-shadow: 0 2px 40px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 40px rgba(0, 0, 0, 0.08);
-}
-
-.search-wrap .search-field form input {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  border: none;
-  padding: 0 34px 0 10px;
-}
-
-.search-wrap .search-field form i {
-  position: absolute;
-  color: #EF4126;
-  cursor: pointer;
-  right: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 19px;
-}
-
-.search-wrap .search-icon.active ~ .search-field {
-  opacity: 1;
-  pointer-events: auto;
-  bottom: -75px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  background: #000;
-  z-index: 999;
-  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.01);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.01);
-  padding-top: unset;
-  border: none;
-}
-
-.sticky .main-nav > ul > li {
-  padding: 34px 23px;
-}
-
-.sticky .main-nav > ul > li.has-child-menu:after {
-  top: 33px;
-}
-
-.menu-info-wrap {
-  z-index: 99;
-  top: 0;
-  left: 20%;
-}
-
-.menu-info-wrap .menu-info-shape {
-  display: inline-block;
-}
-
-.menu-info-wrap .menu-info-shape a {
-  text-transform: lowercase;
-  color: #1A064E;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.menu-info-wrap .menu-info-shape a i {
-  margin-right: 5px;
-}
-
-.menu-info-wrap .menu-info-content p {
-  color: #FFFFFF;
-}
-
-.menu-info-wrap .menu-info-content p a {
-  color: #EF4126;
-}
 
 /*================================================
 3. Hero CSS
@@ -829,10 +517,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .assignment-tab-wrap .nav-link.active, .assignment-tab-wrap .nav-pills .show > .nav-link {
   color: #EF4126;
   background-color: unset;
-}
-
-.assignment-form-wrap form {
-  padding: 0 30px;
 }
 
 .assignment-form-wrap form input, .assignment-form-wrap form textarea, .assignment-form-wrap form .input-file-upload {
@@ -1430,19 +1114,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   transition: all .4s ease-in-out;
 }
 
-/*================================================
-9. Books Area CSS
-=================================================*/
-.books-wrap {
-  margin-bottom: 24px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.books-wrap:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
 
 /*================================================
 10. Testimonial area CSS
@@ -3472,30 +3143,117 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 /* Styling for the tasking endpoint */
 
 .task-section{
-  margin: 20vh 10px 10px 0px;
+  margin: 5vh 10px 10px 0px;
   padding: 10px;
-  width: 70%;
+  width: 100%;
+  height: auto;
+}
+
+.filters{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 14px;
+}
+
+.filters button:hover{
+  background-color: #e0e1e2;
 }
 
 .task-body{
   background-color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-evenly;
   margin: 10px;
-  min-height: 20vh;
-  align-items: center;
 }
 
-.task-body button{
-  background: none;
-  border-style: none;
+.task-body table{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(208, 211, 212);
+  background-color: white;
+}
+
+table thead{
+  padding: 16px;
+  height: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgb(208, 211, 212);
+}
+
+table thead th {
+  vertical-align: bottom;
+}
+
+table th,
+table td {
   padding: 10px;
-  border: 1px solid black;
-  font-weight: bolder;
+  vertical-align: top;
+  text-align: left;
 }
 
-.task-body .manage-task button:hover{
-  background-color: #EF4126;
-  color: white;
+table td {
+  padding: 16px;
+}
+
+.task-content{
+  width: 470px;
+}
+
+table button{
+  border-color: rgb(0, 89, 110);
+  color: rgb(0, 89, 110);
+  padding: 7px 16px 5px;
+  border: 1px solid rgb(162, 170, 173);
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+.pagination{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 14px;
+}
+
+.pagination .item-filter-btn,
+.btn-group button,
+.sort-func button {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  max-height: 50px;
+  border: 1px solid rgb(162, 170, 173);
+  color: rgb(75, 79, 84);
+  font-size: 14px;
+  opacity: 1;
+  padding-left: 6px;
+  outline: 0px !important;
+  cursor: pointer;
+}
+
+.pagination a{
+  color: rgb(0, 118, 147);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }

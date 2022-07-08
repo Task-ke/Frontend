@@ -58,7 +58,7 @@ function Main() {
     const fetchData=()=>{
         setLoading(true);
         console.log('loading')
-        axios.get('http://127.0.0.1:5000/admin/home').then(
+        axios.get('https://taskwithmeke.co.ke/api/admin/home').then(
             function(response){
                 console.log(response)
                 setTimeout(() => {
@@ -86,27 +86,7 @@ function Main() {
             ))}
         </Routes >
         }
-
-        <div className="books-area pb-120">
-            <div className="container">
-                <div className="row row-cols-2 row-cols-xl-5 row-cols-xxl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center">
-                    
-                </div>
-            </div>
-            <div className="common-border common-border-top-none"></div>
-        </div>
         <Footer/>
-        <div className="copy-right-area">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="copy-text text-center wow flipInX" data-wow-duration="2s" data-wow-delay="1s">
-                            <p>Copyright by <Link to="/">@taskwithmeke.co.ke.</Link> All rights reserved 2022.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
   )
 }
