@@ -1,24 +1,71 @@
-import React from 'react'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
 function Tasks() {
+  
+  const taskApi = axios.create(
+    {
+      baseURL: "http://localhost:5000/tasks"
+    }
+  );
+
+  const [tasks, setTasks] = useState(
+    {
+      tasks: [
+        {
+          title: "Creation of image recognition System",
+          description : "Stout Project: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and More ...",
+          amount: 500,
+          owner: "Master",
+          level: "Strict"
+        },
+        {
+          title: "Display cool graphs using python",
+          description: "Amsterdam real Project involving the installation of new python modules: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and",
+          amount: 8,
+          owner: "Lumuli",
+          level: "strict"
+        }
+      ]
+    }
+  )
+
+  const headers = {
+
+  }
+
+  useEffect(()=>{
+    const getTasks = async ()=>{
+      const response = await taskApi.get(
+        '/'
+      ).then(
+        setTasks(response.data)
+      ).catch(error=>{
+        console.log(error.toJSON())
+      })
+           
+    }
+    getTasks();
+
+  }, [])
+
+
   return (
     <div className="task-section">
-      <div className='filters'>
+      <div className='filters tabs'>
         <div className='btn-group'>
-          <button>Suggested for you</button>
-          <button>Applied Projects</button>
-          <button>Pending projects</button>
-          <button>Claimed Projects</button>
-          <button>All Projects</button>
+          <button><a href='#tabs-1'>Suggested for you</a></button>
+          <button><a href='#tabs-2'>Applied Projects</a></button>
+          <button><a href='#tabs-3'>Pending projects</a></button>
+          <button><a href='#tabs-4'>Claimed Projects</a></button>
+          <button><a href='#tabs-5'>All Projects</a></button>
         </div>
         <div class="sort-func">
           <button>add Filter</button>
         </div>
       </div>
-      
       <div className='task-body'>
-        <table>
+        <table id="tabs-1">
           <thead>
             <tr>
               <th>Task Description</th>
@@ -30,30 +77,24 @@ function Tasks() {
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <td className='task-content'>
-                  <h6>Creation of image recognition System</h6>
-                  Stout Project: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and <a href='#'>More ...</a>
-                </td>
-                <td>Master</td>
-                <td>$ 4.00 per hour</td>
-                <td>Strict</td>
-                <td><button>claim task</button></td>
-                <td>
-                  <button>view task</button>
-                </td>
-              </tr>
-              <tr>
-                <td className='task-content'>
-                  <h6>Display cool graphs using python</h6>
-                  Amsterdam real Project involving the installation of new python modules: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and <a href='#'>More ...</a>
-                </td>
-                <td>Lumuli</td>
-                <td>$ 8.00</td>
-                <td>Strict</td>
-                <td><button>claim task</button></td>
-                <td><button>view task</button></td>
-              </tr>   
+            {
+              tasks.tasks.map(task =><tr>
+                  <td className='task-content'>
+                    <h6>{task.title}</h6>
+                    <p>{task.description}</p>
+                  </td>
+                  <td>{task.owner}</td>
+                  <td>$ {task.amount}</td>
+                  <td>{task.level}</td>
+                  <td>
+                    <button>claim task</button>
+                  </td>
+                  <td>
+                      <button>view task</button>
+                    </td>
+                </tr>
+              )
+            }  
           </tbody>
         </table>
       </div>

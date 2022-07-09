@@ -76,7 +76,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
-  font-family: "Nunito", sans-serif;
+  /* font-family: "Nunito", sans-serif; */
   font-weight: 700;
   color: #1A064E;
   text-transform: capitalize;
@@ -87,8 +87,8 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-weight: 400;
   font-size: 14px;
-  color: #777777;
-  background: #F6F6F6;
+  /* color: #777777; */
+  /* background: #F6F6F6; */
 }
 
 p {
@@ -243,43 +243,28 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 }
 
 .common-btn {
-  display: inline-block;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  background: #EF4126;
-  border-radius: 10px;
-  padding: 21px 41px;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  overflow: hidden;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 38px;
   position: relative;
-  z-index: 1;
-}
-
-.common-btn:hover {
-  color: #fff;
-}
-
-.common-btn:hover::before {
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  max-height: 50px;
+  border: 1px solid rgb(162, 170, 173);
+  color: rgb(75, 79, 84);
+  font-size: 14px;
+  opacity: 1;
+  padding-left: 6px;
+  outline: 0px !important;
+  cursor: pointer;
   width: 100%;
-}
-
-.common-btn:before {
-  position: absolute;
-  height: 100%;
-  width: 0;
-  background: #3f10f9;
-  content: "";
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -1;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
 .breadcrumb-area {
@@ -335,10 +320,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-}
-
-.main-nav {
   width: 100%;
   left: 0;
   top: 0;
@@ -363,9 +344,9 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   position: absolute;
   right: 4px;
   top: 44.5px;
-  font-family: "boxicons";
+  /* font-family: "boxicons"; */
   content: "";
-  font-size: 17px;
+  font-size: 14px;
   color: #ffffff91;
   -webkit-transition: all .4s;
   transition: all .4s;
@@ -379,9 +360,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .main-nav > ul > li > a {
   display: block;
   text-decoration: none;
-  font-family: 'Nunito';
-  font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1711,144 +1690,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 }
 
 /*================================================
-17. Team Area CSS
-=================================================*/
-.team-cta-wrap {
-  background-image: url(../images/team/team-bg.png);
-  border-radius: 30px;
-  overflow: hidden;
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 100px 30px;
-  background-attachment: fixed;
-}
-
-.team-cta-wrap h1 {
-  font-size: 74px;
-  line-height: 90px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  margin-bottom: 41px;
-}
-
-.team-box {
-  margin-bottom: 24px;
-}
-
-.team-box:hover .team-img img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.team-box:hover .team-content-wrap::before {
-  height: 100%;
-}
-
-.team-box:hover .team-content-wrap .team-content h3 a {
-  color: #fff;
-}
-
-.team-box:hover .team-content-wrap .team-content p {
-  color: #fff;
-}
-
-.team-box:hover .team-social {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-}
-
-.team-box .team-img {
-  overflow: hidden;
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-
-.team-box .team-img img {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
-}
-
-.team-box .team-content-wrap {
-  background: #FFFFFF;
-  border-radius: 15px;
-  padding: 15px 25px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.team-box .team-content-wrap::before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  content: "";
-  height: 0;
-  width: 100%;
-  background: #EF4126;
-  z-index: -1;
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-}
-
-.team-box .team-content-wrap .team-content h3 {
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: capitalize;
-  margin-bottom: 5px;
-}
-
-.team-box .team-content-wrap .team-content h3 a {
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-}
-
-.team-box .team-content-wrap .team-content p {
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-}
-
-.team-box .team-content-wrap .team-social {
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-}
-
-.team-box .team-content-wrap .team-social a i {
-  color: #E0E0E0;
-  font-size: 28px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.team-box.team-box-design-2 .team-content-wrap::before {
-  background: #1A064E;
-}
-
-.team-box.team-box-design-2:hover .team-social a i {
-  color: #EF4126;
-}
-
-.team-area {
-  background-image: url(../images/shape/team-bg-shape.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-.team-area.team-area-2 {
-  background-position: top;
-}
-
-.team-area.team-area-2 .team-cta-wrap {
-  margin-top: -30px;
-}
-
-/*================================================
 18. Hero area three CSS
 =================================================*/
 .hero-style-three {
@@ -2706,59 +2547,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   font-size: 24px;
 }
 
-.contact-input input, .contact-input textarea {
-  width: 100%;
-  background: #FFFFFF;
-  border: 1px solid rgba(100, 64, 250, 0.07);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-}
 
-.contact-input .contact-btn-wrap button {
-  border: none;
-}
-
-.contact-input .contact-check span {
-  color: #B14233;
-}
-
-.contact-input .form-message {
-  position: absolute;
-  top: 100%;
-}
-
-.contact-input .form-message.error {
-  color: red;
-}
-
-.contact-input .form-message.success {
-  color: green;
-}
-
-.contact-info:hover .contact-details-icon i {
-  background: #EF4126;
-}
-
-.contact-info .contact-details-icon i {
-  width: 70px;
-  height: 70px;
-  background: #EF4126;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 35px;
-  -webkit-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-}
-
-.contact-info .contact-details-info {
-  padding-left: 25px;
-}
-
-.contact-info .contact-details-info h3 {
-  font-weight: 600;
-  font-size: 18px;
-}
 
 /*================================================
 29. Teachers Details CSS
@@ -3256,4 +3045,171 @@ table button{
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+
+/* Authentication form */
+
+.authentication-wrap{
+  display: flex;
+  -webkit-box-pack: justify;
+  margin-top: 15vh;
+  padding: 14px;
+  width:80%;
+  height: 80vh;
+  margin-left: auto;
+}
+
+.contact-input{
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+.contact-input input:not(input[type='checkbox']), .contact-input textarea {
+  width: 100%;
+  border: 1px solid rgba(58, 52, 52, 0.158);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.contact-input button{
+  background-color: black;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.contact-input .form-message {
+  position: absolute;
+  top: 100%;
+}
+
+.contact-input .remember{
+  color: rgb(0, 118, 147);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-input .form-message.error {
+  color: red;
+}
+
+.contact-input .form-message.success {
+  color: green;
+}
+
+.contact-info:hover .contact-details-icon i {
+  background: #EF4126;
+}
+
+.contact-info .contact-details-icon i {
+  width: 70px;
+  height: 70px;
+  background: #EF4126;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 35px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.contact-info .contact-details-info {
+  padding-left: 25px;
+}
+
+.contact-info .contact-details-info h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.add-space{
+  margin-top: 10px;
+}
+/* Home page */
+
+.organization-welcome{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-body div{
+  margin-top: 30px;
+}
+
+.HomeAdd{
+  display: flex;
+  width: 100%;
+}
+
+.HomeAdd button:nth-child(odd){
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+}
+
+.HomeAdd button{
+  padding: 20px;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  max-height: 70px;
+  cursor: pointer;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 20px;
+  color: black;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 1s ease-in-out;
+}
+
+.HomeAdd button:nth-child(even):hover{
+  background-color: #ec3418;
+  color: white;
+}
+
+.Add-text{
+  line-height: 2rem;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.organization-morals{
+  background-color: #183B56;
+  height: 60vh;
+}
+
+.Morals-card{
+  background-color: white;
+  position: relative;
+  height: inherit;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 2rem;
+  height: 100%;
 }
