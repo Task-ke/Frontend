@@ -33,7 +33,7 @@ function Home() {
 			  <div className='organization-morals mt-60'>
 				<div className='container-fluid'>
 					<div className='row'>
-						<div className='col-lg-4'>
+						<div className='col-lg-4 col-md-4 col-sm-12'>
 							<div className='Morals-card'>
 								<h6 className='text text-danger'>Trust and accountability</h6>
 								<p>
@@ -44,7 +44,7 @@ function Home() {
 								</p>
 							</div>
 						</div>
-						<div className='col-lg-4'>
+						<div className='col-lg-4 col-md-4 col-sm-12'>
 							<div className='Morals-card'>
 								<h6 className='text text-danger'>Focus and Service Delivery</h6>
 								<p>
@@ -54,7 +54,7 @@ function Home() {
 								</p>
 							</div>
 						</div>
-						<div className='col-lg-4'>
+						<div className='col-lg-4 col-md-4 col-sm-12'>
 							<div className='Morals-card'>
 								<h6 className='text text-danger'>Privacy and confidentiality</h6>
 								<p>
@@ -65,6 +65,53 @@ function Home() {
 						</div>
 					</div>
 				</div>
+			  </div>
+			  <div className='blogPost container-fluid'>
+				<h6 className='display-6 text text-success'>Latest Posts</h6>
+				<div className='blogPost-cover'>
+					<div className='post-card'>
+						<img src={process.env.PUBLIC_URL+"gallery-4.png"}/>
+						<div className='post-card-text'>
+							<h6 className='text-danger'>Quick guide to authentication</h6>
+							<p>
+								Authentication is the first step for identification in the system. Our organization manages the sessions for security purposes.
+							</p>
+							
+						</div>
+						<div className='post-card-footer'>
+							<a>Read More </a>
+						</div>
+					</div>
+					<div className='post-card'>
+						<img src={process.env.PUBLIC_URL+"gallery-4.jpeg"}/>
+						<div className='post-card-text'>
+							<h6 className='text-danger'>Task completion tips</h6>
+							<p>
+								Complete your tasks on time to increase your ratings in order to get more tasks.
+								The higher your ratings the more the tasks you get.
+							</p>
+							
+						</div>
+						<div className='post-card-footer'>
+							<a>Read More </a>
+						</div>
+					</div>
+					<div className='post-card'>
+						<img src={process.env.PUBLIC_URL+"gallery-4.png"}/>
+						<div className='post-card-text'>
+							<h6 className='text-danger'>Data Safety tips</h6>
+							<p>
+								Ensure that you register to the site with strong 
+								passwords to give attacker a hard time decrypting your password.
+							</p>
+							
+						</div>
+						<div className='post-card-footer'>
+							<a>Read More </a>
+						</div>
+					</div>
+				</div>
+				
 			  </div>
 		  </div></>
   )

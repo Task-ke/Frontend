@@ -268,7 +268,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 }
 
 .breadcrumb-area {
-  background-image: url(../images/shape/breadcrumb-bg-shape.png);
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -399,7 +398,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 3. Hero CSS
 =================================================*/
 .hero-area {
-  background-image: url(../images/shape/hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -823,7 +821,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 7. Assignment Area CSS
 =================================================*/
 .assignment-area {
-  background-image: url(../images/shape/assignment-1.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1112,7 +1109,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: url(../images/animated-text-fill.png) repeat-y;
   -webkit-background-clip: text;
   /* Animate Background Image */
   -webkit-text-fill-color: #EF4126b8;
@@ -1559,7 +1555,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 14. Hero Two CSS
 =================================================*/
 .hero-style-two {
-  background-image: url(../images/shape/hero-2.png);
   padding: 145px 0 215px;
 }
 
@@ -1695,7 +1690,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .hero-style-three {
   background-image: unset;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(39, 18, 123, 0.64)), to(rgba(39, 18, 123, 0.64))), url(../images/hero-bg-3.png);
-  background: linear-gradient(rgba(39, 18, 123, 0.64) 100%, rgba(39, 18, 123, 0.64) 100%), url(../images/hero-bg-3.png);
   background-repeat: no-repeat !important;
   background-size: 100% 100%;
   padding: 290px 30px 189px;
@@ -1897,8 +1891,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 21. Team Member CSS
 =================================================*/
 .team-member-wrap {
-  background: url(../images/shape/team-bg-shape-3.png), -webkit-gradient(linear, left top, left bottom, color-stop(100%, #EF4126), to(#EF4126));
-  background: url(../images/shape/team-bg-shape-3.png), linear-gradient(#EF4126 100%, #EF4126 100%);
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -3209,7 +3201,69 @@ table button{
   padding: 20px;
   margin-top: 30px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2rem;
   height: 100%;
+  margin-bottom: 20px;
+}
+
+.blogPost{
+  height: 80vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6d9dbe1;
+}
+
+
+.blogPost-cover{
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 340px);
+  grid-gap: 15px;
+}
+
+.post-card{
+  z-index: auto;
+  background-color: rgb(255,255,255);
+  border-radius: 4px;
+  height: 100%;
+  padding: 5px;
+}
+
+.post-card img{
+  width: 340px;
+  height: 219px;
+}
+
+.post-card-text{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.post-card-text p{
+    padding-top: 8px;
+    padding-right: 48px;
+    padding-bottom: 35px;
+    margin: 0px;
+    color: #000000;
+    letter-spacing: 0.18px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: none;
+    overflow: hidden;
+    min-height: 90px;
+}
+
+.post-card-footer{
+  padding: 10px;
+  font-size: 16px;
+}
+
+.post-card-footer a{
+  font-weight: bold;
 }
