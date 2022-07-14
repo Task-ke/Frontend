@@ -5,7 +5,7 @@ function Tasks() {
   
   const taskApi = axios.create(
     {
-      baseURL: "http://localhost:5000/tasks"
+      baseURL: "http://taskwithmeke.co.ke/api/tasks"
     }
   );
 

@@ -319,6 +319,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   left: 0;
   top: 0;
@@ -326,34 +327,13 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   background: #282c34;
   border-bottom: 3px solid inherit;
   position: fixed;
-  height: 10vh;
-}
-
-.main-nav > ul{
-  margin-left: auto;
+  height: 15vh;
 }
 
 .main-nav > ul > li {
   display: inline-block;
   position: relative;
   padding: 20px 20px;
-}
-
-.main-nav > ul > li.has-child-menu:after {
-  position: absolute;
-  right: 4px;
-  top: 44.5px;
-  /* font-family: "boxicons"; */
-  content: "";
-  font-size: 14px;
-  color: #ffffff91;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.main-nav > ul > li:hover.has-child-menu:after {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 .main-nav > ul > li > a {
@@ -365,223 +345,40 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   transition: all 0.3s;
   color: #fff;
 }
-
-.main-nav > ul > li:hover > a:after {
-  opacity: 1;
-}
-
-
-.menu-btn {
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 14px 28px;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-}
-
-.menu-btn:hover {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  color: #fff;
-}
-
-
-/*================================================
-3. Hero CSS
-=================================================*/
-.hero-area {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding: 232px 0 250px;
-}
-
-.hero-round-1 {
-  -webkit-animation: rot-2 20s linear infinite;
-          animation: rot-2 20s linear infinite;
-  top: 160px;
-  left: 40%;
-}
-
-.hero-content h1 {
-  font-weight: 400;
-  font-size: 72px;
-  line-height: 98px;
-  color: #FFFFFF;
-}
-
-.hero-content h2 {
-  font-weight: 400;
-  font-size: 24px;
-  color: #FFFFFF;
-  margin: 18px 0 112px;
-}
-
-.hero-content h2 a {
-  color: #EF4126;
-}
-
-.hero-content .hero-rating-wrap .owl-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.main-nav .authenticate {
   display: flex;
+  width: 10%;
+  justify-content: space-between;
 }
 
-.hero-content .hero-rating-wrap .hero-rating ul {
-  margin-top: 26px;
-}
-
-.hero-content .hero-rating-wrap .hero-rating ul li {
-  display: inline-block;
-  line-height: 1;
-  color: #FFD954;
-}
-
-.hero-content .hero-rating-wrap .hero-rating ul li i {
-  font-size: 12px;
-}
-
-.hero-content .hero-rating-wrap .hero-rating ul li:last-child {
-  color: #fff;
-  margin-left: 5px;
-}
-
-.hero-content.hero-content-style-3 h1 {
-  margin: 4px 0px 34px;
-}
-
-.hero-content.hero-content-style-3 h2 {
-  margin: 0px 0 0px;
-}
-
-.assignment-tab-wrap {
-  background: #FFFFFF;
-  border-radius: 10px;
-  padding: 0px 0 50px;
-}
-
-.assignment-tab-wrap .nav {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #6541FA;
-  padding: 17px 10px;
-}
-
-.assignment-tab-wrap .nav-link {
-  background: none;
-  border-radius: unset;
-  border: none;
-  margin-right: 24px;
-  padding: 0;
-  line-height: 1;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #1A064E;
-}
-
-.assignment-tab-wrap .nav-link.active, .assignment-tab-wrap .nav-pills .show > .nav-link {
-  color: #EF4126;
-  background-color: unset;
-}
-
-.assignment-form-wrap form input, .assignment-form-wrap form textarea, .assignment-form-wrap form .input-file-upload {
-  width: 100%;
-  background: #F3F7FA;
-  border: 1px solid rgba(26, 6, 78, 0.07);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  padding: 13px 30px;
-  margin-bottom: 20px;
-}
-
-.assignment-form-wrap form input::-webkit-input-placeholder, .assignment-form-wrap form textarea::-webkit-input-placeholder, .assignment-form-wrap form .input-file-upload::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  color: #777777;
-}
-
-.assignment-form-wrap form input:-ms-input-placeholder, .assignment-form-wrap form textarea:-ms-input-placeholder, .assignment-form-wrap form .input-file-upload:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  color: #777777;
-}
-
-.assignment-form-wrap form input::-ms-input-placeholder, .assignment-form-wrap form textarea::-ms-input-placeholder, .assignment-form-wrap form .input-file-upload::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  color: #777777;
-}
-
-.assignment-form-wrap form input::placeholder, .assignment-form-wrap form textarea::placeholder, .assignment-form-wrap form .input-file-upload::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  color: #777777;
-}
-
-.assignment-form-wrap form .input-file-upload {
-  z-index: 1;
+.main-nav button{
+  padding: 7px 16px 5px;
+  border: 1px solid rgb(162, 170, 173);
+  text-align: center;
   cursor: pointer;
-  padding: 9px 30px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 10px;
+  border-style: none;
 }
 
-.assignment-form-wrap form .input-file-upload img, .assignment-form-wrap form .input-file-upload span {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-  z-index: -1;
+.main-nav button:nth-child(odd){
+  background-color: #EF4126;
+  color: white;
 }
 
-.assignment-form-wrap form .input-file-upload span {
-  left: 30px;
-  right: auto;
-}
-
-.assignment-form-wrap form input[type="file" i] {
+.main-nav .hamburger{
   position: relative;
-  filter: alpha(opacity=0);
-  outline: none;
-  cursor: inherit;
-  color: transparent;
-  opacity: 0;
-  padding: 0px;
-  margin-bottom: 0px;
+  padding: 20px;
+  width: 5%;
+  cursor: pointer;
 }
 
-.assignment-form-wrap form .assignment-btn-wrap button {
-  border: none;
-  background: #EF4126;
-  border-radius: 5px;
+.main-nav .hamburger div{
+  background-color: white;
+  padding: 1px;
+  margin-bottom: 4px;
   width: 100%;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #FFFFFF;
-  padding: 11px 10px;
-  -webkit-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
 }
-
-.assignment-form-wrap form .assignment-btn-wrap button:hover {
-  background: #a86500;
-}
-
 /*================================================
 4. Service Area CSS
 =================================================*/
@@ -1190,7 +987,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 
 .faq-wrap .accordion-button::after {
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: unset;
   height: unset;
   margin-left: auto;
@@ -2924,7 +2721,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 /* Styling for the tasking endpoint */
 
 .task-section{
-  margin: 5vh 10px 10px 0px;
+  margin: 8vh 10px 10px 0px;
   padding: 10px;
   width: 100%;
   height: auto;
@@ -3189,81 +2986,17 @@ table button{
   font-weight: 100;
 }
 
-.organization-morals{
-  background-color: #183B56;
-  height: 60vh;
-}
-
-.Morals-card{
-  background-color: white;
-  position: relative;
-  height: inherit;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 2rem;
-  height: 100%;
-  margin-bottom: 20px;
-}
-
-.blogPost{
-  height: 80vh;
-  padding: 10px;
+.build-trust{
   display: flex;
-  flex-direction: column;
-  background-color: #d6d9dbe1;
-}
-
-
-.blogPost-cover{
-  height: 100%;
-  padding: 10px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 340px);
-  grid-gap: 15px;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.post-card{
-  z-index: auto;
-  background-color: rgb(255,255,255);
-  border-radius: 4px;
-  height: 100%;
-  padding: 5px;
-}
-
-.post-card img{
-  width: 340px;
-  height: 219px;
-}
-
-.post-card-text{
-  padding: 10px;
+.partner{
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.post-card-text p{
-    padding-top: 8px;
-    padding-right: 48px;
-    padding-bottom: 35px;
-    margin: 0px;
-    color: #000000;
-    letter-spacing: 0.18px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-transform: none;
-    overflow: hidden;
-    min-height: 90px;
-}
-
-.post-card-footer{
-  padding: 10px;
-  font-size: 16px;
-}
-
-.post-card-footer a{
-  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }

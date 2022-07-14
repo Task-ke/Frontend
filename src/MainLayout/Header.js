@@ -8,6 +8,11 @@ function Header() {
   return (
 	<header>
 		<nav className='main-nav'>
+			<div className='hamburger'>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 			<ul>
 				<li>
 					<Link to="/" className={activeRoutes.Home?'activeTab':''}>Home</Link>
@@ -31,10 +36,12 @@ function Header() {
 					<Link to="/login">Work with us</Link>
 				</li>
 				<li>
-					<Link to="/login">Login to you account</Link>
-				</li>
-				<li>
-					<Link to="#">Worker Profiles</Link>
+					<button>
+						<Link to="/login">Login</Link>
+					</button>
+					<button>
+						<Link to="#">Register</Link>
+					</button>
 				</li>
 			</ul>
 		</nav>
