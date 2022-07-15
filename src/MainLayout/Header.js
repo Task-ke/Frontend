@@ -28,7 +28,7 @@ function Header() {
 					</Link>
 				</li>
 				<li>
-					<Link to="contact.html">
+					<Link to="/contact">
 						Contact
 					</Link>
 				</li>

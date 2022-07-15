@@ -1,54 +1,26 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
+import React, {useState, useEffect, Fragment} from 'react'
 
 function Tasks() {
-  
-  const taskApi = axios.create(
-    {
-      baseURL: "http://taskwithmeke.co.ke/api/tasks"
-    }
-  );
-
-  const [tasks, setTasks] = useState(
-    {
-      tasks: [
-        {
-          title: "Creation of image recognition System",
-          description : "Stout Project: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and More ...",
-          amount: 500,
-          owner: "Master",
-          level: "Strict"
-        },
-        {
-          title: "Display cool graphs using python",
-          description: "Amsterdam real Project involving the installation of new python modules: Social Media Evaluator   Project Purpose: The purpose of this workflow is to evaluate a given column of 9 anchor-candidate image pairs, we want to identify which of the candidate images are similar to the anchor image and",
-          amount: 8,
-          owner: "Lumuli",
-          level: "strict"
-        }
-      ]
-    }
-  )
-
-  const headers = {
-
-  }
+  const [tasks, setTasks] = useState({})
+  const [isLoaded, setLoaded] = useState(false)
+  const [Error, setError] = useState(null)
 
   useEffect(()=>{
-    const getTasks = async ()=>{
-      const response = await taskApi.get(
-        '/'
+    fetch("https://taskwithmeke.co.ke/api/tasks/").then(
+      (response)=> response.json()
       ).then(
-        setTasks(response.data)
-      ).catch(error=>{
-        console.log(error.toJSON())
+        (data)=>{
+          setTasks(data)
+          setLoaded(true)
+        }
+      ).catch((error)=>{
+        setError(true)
       })
-           
-    }
-    getTasks();
-
   }, [])
 
+  function ClaimTask(taskid){
+
+  }
 
   return (
     <div className="task-section">
@@ -60,7 +32,7 @@ function Tasks() {
           <button><a href='#tabs-4'>Claimed Projects</a></button>
           <button><a href='#tabs-5'>All Projects</a></button>
         </div>
-        <div class="sort-func">
+        <div className="sort-func">
           <button>add Filter</button>
         </div>
       </div>
@@ -77,24 +49,33 @@ function Tasks() {
             </tr>
           </thead>
           <tbody>
-            {
-              tasks.tasks.map(task =><tr>
+          {(()=>{
+           if(isLoaded === true){
+            tasks.tasks.map(
+              task =>{
+                return(
+                  <tr>
                   <td className='task-content'>
                     <h6>{task.title}</h6>
                     <p>{task.description}</p>
                   </td>
-                  <td>{task.owner}</td>
-                  <td>$ {task.amount}</td>
-                  <td>{task.level}</td>
+                  <td>{task.creator_id}</td>
+                  <td>$ {task.Amount}</td>
+                  <td>Moderate</td>
                   <td>
-                    <button>claim task</button>
+                    <form method='POST'>
+                      <button onSubmit={ClaimTask(task.id)}>claim task</button>
+                    </form>
                   </td>
                   <td>
-                      <button>view task</button>
-                    </td>
-                </tr>
-              )
-            }  
+                    <button>view task</button>
+                  </td>
+                  </tr>
+                  )
+              }
+            )
+           }})
+        ()}
           </tbody>
         </table>
       </div>

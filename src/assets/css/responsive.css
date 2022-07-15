@@ -441,6 +441,16 @@
         width: unset;
         padding: 0 30px;
     }
+
+    .contact-input{
+        width: 100%;
+    }
+
+    .authentication-wrap{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 

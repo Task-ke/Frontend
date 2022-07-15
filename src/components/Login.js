@@ -5,21 +5,11 @@ import axios from 'axios';
 function Login() {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
-
-   const LoginUrl = axios.create(
-      {
-         baseURL: 'http://localhost:5000/login'
-      }
-   )
-   
    const [token, setToken] = useState("");
 
-   const FormSubmitHandler= async()=>{
-      const req = await LoginUrl.post(
-         {
-            'email': email,
-            'password': password
-         }
+   function FormSubmitHandler(){
+      fetch(
+         'http://taskwithmeke.co.ke/login'
       ).then((response)=>{
          setToken(response.data)
       }
@@ -48,7 +38,7 @@ function Login() {
                <input type='checkbox'/>
                Remember me
             </div>
-            <button type="submit" className="common-btn">Login to account</button>
+            <button type="submit" className="login-btn">Login to account</button>
             <small className='add-space'>
                Need an account ? <Link to='#'> create one</Link>
             </small>

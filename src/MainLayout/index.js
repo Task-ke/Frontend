@@ -11,6 +11,7 @@ import '../assets/css/responsive.css';
 import '../assets/js/jquery-3.6.0.min';
 import '../assets/js/jquery-ui';
 import '../assets/js/main';
+import '../assets/css/Contact.css';
 import {Routes  , Route,
     Link,
     useLocation} from 'react-router-dom';
@@ -33,19 +34,26 @@ function Main() {
             activeRoutes.Home=true;
             activeRoutes.About=false;
             activeRoutes.Tasks=false;
+            activeRoutes.Contact = false
 
         }
         else if(location.pathname==='/about'){
             activeRoutes.About=true;
             activeRoutes.Tasks=false;
             activeRoutes.Home=false;
+            activeRoutes.Contact = false;
 
         }
         else if(location.pathname==='/tasks'){
             activeRoutes.Tasks=true;
             activeRoutes.Home=false;
             activeRoutes.About=false;
-
+            activeRoutes.Contact = false;
+        }else if(location.pathname==='/contact'){
+            activeRoutes.Tasks=false;
+            activeRoutes.Home=false;
+            activeRoutes.About=false;
+            activeRoutes.Contact = true;
         }
 
     },[location]);
