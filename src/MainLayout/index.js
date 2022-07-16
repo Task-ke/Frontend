@@ -42,6 +42,7 @@ function Main() {
             activeRoutes.Tasks=false;
             activeRoutes.Home=false;
             activeRoutes.Contact = false;
+            activeRoutes.Account=false;
 
         }
         else if(location.pathname==='/tasks'){
@@ -49,11 +50,19 @@ function Main() {
             activeRoutes.Home=false;
             activeRoutes.About=false;
             activeRoutes.Contact = false;
+            activeRoutes.Account=false;
         }else if(location.pathname==='/contact'){
             activeRoutes.Tasks=false;
             activeRoutes.Home=false;
             activeRoutes.About=false;
             activeRoutes.Contact = true;
+            activeRoutes.Account=false;
+        }else if(location.pathname==='/account'){
+            activeRoutes.Tasks=false;
+            activeRoutes.Home=false;
+            activeRoutes.About=false;
+            activeRoutes.Contact = false;
+            activeRoutes.Account=true;
         }
 
     },[location]);

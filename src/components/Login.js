@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import { post } from 'jquery';
 
 function Login() {
    const [email, setEmail] = useState("");
@@ -9,20 +10,30 @@ function Login() {
 
    function FormSubmitHandler(){
       fetch(
-         'http://taskwithmeke.co.ke/login'
+         'https://taskwithmeke.co.ke/login',
+         {
+            body: {
+               'email': email,
+               'password': password
+            },
+            headers: new Headers({
+               'content-type': 'application/json'
+            }),
+            method: 'post'
+         }
       ).then((response)=>{
          setToken(response.data)
       }
          
       ).catch((error)=>{
-         console.log("Error Occurred")
+         console.log(error)
       })
    };
 
   return (
       <>
       <div className='authentication-wrap'>
-         <form id="contact-form" onSubmit={FormSubmitHandler()} className="contact-input">
+         <form id="contact-form" className="contact-input">
             <h4>Login to account</h4>
             <div>
                <label>Email</label>
@@ -38,7 +49,7 @@ function Login() {
                <input type='checkbox'/>
                Remember me
             </div>
-            <button type="submit" className="login-btn">Login to account</button>
+            <button type="submit" className="login-btn" onClick={FormSubmitHandler()}>Login to account</button>
             <small className='add-space'>
                Need an account ? <Link to='#'> create one</Link>
             </small>

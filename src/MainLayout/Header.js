@@ -36,6 +36,9 @@ function Header() {
 					<Link to="/login">Work with us</Link>
 				</li>
 				<li>
+					<Link to="/account">Account</Link>
+				</li>
+				<li>
 					<button>
 						<Link to="/login">Login</Link>
 					</button>
